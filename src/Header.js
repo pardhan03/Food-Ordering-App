@@ -2,7 +2,7 @@ import './index.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from './utils/useOnlineStatus';
-import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
 
 const Header = () =>{
 
@@ -33,16 +33,11 @@ const Header = () =>{
                         <Link to="/about">About</Link>
                     </li>
                     <li className="px-4">
-                        <Link to="contact">Contact us</Link>
+                        <Link to="contact">Help</Link>
                     </li>
                     <li className="px-4">
                         <Link to="/Cart">Cart</Link>
-                    </li>
-                    <button className='Login-btn' onClick={()=>{
-                        btnName==="Login"
-                        ? setbtnName("Logout")
-                        : setbtnName("Login");
-                    }}>{btnName}</button>
+                    </li>         
                 </ul>
             </div>
         </div>

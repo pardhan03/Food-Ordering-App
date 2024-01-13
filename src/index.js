@@ -10,11 +10,10 @@ import Body from './Body.js';
 import RestaurantMenu from './RestaurantMenu.js';
 //import Grocery from './Grocery.js'
 import Applayout from './App.js';
-import {lazy,Suspense} from 'react';
 import Cart from './Cart.js';
-
-const Grocery = lazy(()=>import("./Grocery.js"));
-
+import Onboarding from './utils/Onboarding.js';
+import Legal from './utils/Legal.js';
+import Faq from './utils/Faq.js';
 const appRouter=createBrowserRouter([
   {
     path:"/",
@@ -31,6 +30,20 @@ const appRouter=createBrowserRouter([
       {
         path:"/contact",
         element:<Contact/>,
+        children:[
+          {
+            path:"/contact/partner-onboarding",
+            element:<Onboarding/>
+          },
+          {
+            path:"/contact/legal",
+            element:<Legal/>
+          },
+          {
+            path:"/contact/faq",
+            element:<Faq/>
+          }
+        ]
       },
       {
         path:"restaurant/:resId",
