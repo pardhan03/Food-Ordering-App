@@ -6,7 +6,7 @@ import useOnlineStatus from "./utils/useOnlineStatus";
 
 const Body = () =>{
 
-    const [listofrestaurants,setListofRestaurant]=useState([]);
+    const [listofrestaurants,setListofRestaurant]=useState([0,1]);
     const [filteredRestaurant, setfilteredRestaurant]=useState([]);
 
     const [searchText, setsearchText]=useState();
@@ -19,9 +19,9 @@ const Body = () =>{
         const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.7333148&lng=76.7794179&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json= await data.json();
         console.log(json);
-        setListofRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setListofRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setfilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        console.log(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
     }
 

@@ -1890,3 +1890,4 @@ export const AP_DATA="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU
 export const API_DATA="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.7333148&lng=76.7794179&restaurantId=264693";
 
 export const NEW_API="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.7333148&lng=76.7794179&restaurantId=";
+
